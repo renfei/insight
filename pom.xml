@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.renfei</groupId>
+    <artifactId>insight</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>insighter</module>
+        <module>api</module>
+    </modules>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/renfei/insight/issues</url>
+    </issueManagement>
+
+    <inceptionYear>2021</inceptionYear>
+
+    <scm>
+        <connection>scm:git:git://github.com/renfei/insight.git</connection>
+        <developerConnection>scm:git:git@github.com:renfei/insight.git</developerConnection>
+        <url>https://github.com/renfei/insight</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>renfei</id>
+            <name>RenFei</name>
+            <email>i@renfei.net</email>
+            <roles>
+                <role>owner</role>
+                <role>developer</role>
+            </roles>
+            <organization>RENFEI.NET</organization>
+            <organizationUrl>https://www.renfei.net</organizationUrl>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <properties>
+        <spring-boot.version>2.4.5</spring-boot.version>
+        <spring-cloud.version>2020.0.2</spring-cloud.version>
+        <renfei-sdk.version>1.1.1</renfei-sdk.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.renfei</groupId>
+            <artifactId>sdk</artifactId>
+            <version>${renfei-sdk.version}</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

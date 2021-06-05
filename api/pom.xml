@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>insight</artifactId>
+        <groupId>net.renfei</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.renfei.insight</groupId>
+    <artifactId>api</artifactId>
+    <packaging>jar</packaging>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/renfei/insight/issues</url>
+    </issueManagement>
+
+    <inceptionYear>2021</inceptionYear>
+
+    <scm>
+        <connection>scm:git:git://github.com/renfei/insight.git</connection>
+        <developerConnection>scm:git:git@github.com:renfei/insight.git</developerConnection>
+        <url>https://github.com/renfei/insight</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>renfei</id>
+            <name>RenFei</name>
+            <email>i@renfei.net</email>
+            <roles>
+                <role>owner</role>
+                <role>developer</role>
+            </roles>
+            <organization>RENFEI.NET</organization>
+            <organizationUrl>https://www.renfei.net</organizationUrl>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>insight-api</finalName>
+    </build>
+</project>
